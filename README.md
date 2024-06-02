@@ -45,3 +45,9 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## LICENSE
+
+This project includes code from the [chrismwilliams/astro-theme-cactus](https://github.com/chrismwilliams/astro-theme-cactus) which is licensed the MIT License.
+
+MIT
