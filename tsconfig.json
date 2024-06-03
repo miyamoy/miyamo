@@ -4,7 +4,8 @@
     "baseUrl": ".",
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "paths": {
-      "@/types": ["src/types.ts"]
+      "@/types": ["src/types.ts"],
+      "@/site-config": ["src/site.config.ts"]
     }
   }
 }
