@@ -1,25 +1,21 @@
 ---
 import "../styles/global.css"
+
+import PageLayout from "@/layouts/Base.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>💻</text></svg>">
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>miyamo.me</title>
-	</head>
-	<body>
-		<h1>miyamo</h1>
-		<p>Software engineer at a game company.</p>
+<PageLayout meta={{ title: "Home" }}>
+	<section>
+		<h1 class="title mb-6">miyamo.me</h1>
+		<p class="mb-4">Software engineer at a game company</p>
+	</section>
+	<section aria-label="Social link list" class="mt-16">
 		<ul>	
 			<li><a href="https://github.com/miyamoy">GitHub</a></li>
 			<li><a href="https://twitter.com/miyamo_ys">X(Twitter)</a></li>
 			<li><a href="https://bsky.app/profile/miyamo.me">Bluesky</a></li>
 			<li><a href="https://www.instagram.com/miyamo.y/">Instagram</a></li>
 			<li><a href="https://www.threads.net/@miyamo.y">Threads</a></li>
-			<li><a href="./blog">Blog</a></li>
 		</ul>
-	</body>
-</html>
+	</section>
+</PageLayout>
