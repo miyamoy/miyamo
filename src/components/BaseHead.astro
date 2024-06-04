@@ -1,0 +1,44 @@
+---
+import type { SiteMeta } from "@/types";
+
+import { siteConfig } from "@/site-config";
+
+import "../styles/global.css";
+
+type Props = SiteMeta;
+
+const { articleDate, description, ogImage, title } = Astro.props;
+
+const titleSeparator = "•";
+const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL(ogImage ? ogImage : "/social-card.png", Astro.url).href;
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>{siteTitle}</title>
+
+{/* Primary Meta Tags */}
+<meta name="title" content={siteTitle} />
+<meta name="description" content={description} />
+<meta name="author" content={siteConfig.author} />
+
+{/* Theme Color */}
+<meta name="theme-color" content="" />
+
+{/* Twitter */}
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={socialImageURL} />
+
+{/* Sitemap */}
+<link rel="sitemap" href="/sitemap-index.html" />
+
+{/* RSS auto-discovery */}
+<link rel="alternamte" href="/rss.xml" title={siteConfig.title} type="application/rss+xml" />
+
+<meta name="generator" content={Astro.generator} />
