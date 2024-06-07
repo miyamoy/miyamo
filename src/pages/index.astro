@@ -1,10 +1,13 @@
 ---
+import { getCollection } from "astro:content";
 import "../styles/global.css"
 
 import PageLayout from "@/layouts/Base.astro";
+
+const allPosts = await getCollection("post");
 ---
 
-<PageLayout meta={{ title: "Home" }}>
+<PageLayout siteMeta={{ title: "Home" }}>
 	<section>
 		<h1 class="title mb-6">miyamo.me</h1>
 		<p class="mb-4">Software engineer at a game company</p>
@@ -17,5 +20,14 @@ import PageLayout from "@/layouts/Base.astro";
 			<li><a href="https://www.instagram.com/miyamo.y/">Instagram</a></li>
 			<li><a href="https://www.threads.net/@miyamo.y">Threads</a></li>
 		</ul>
+	</section>
+	<section>
+		{
+			allPosts.map((post) => (
+				<ul>
+					<li><a href={"posts/" + post.slug}></a>{post.data.title}</li>
+				</ul>
+			))	
+		}
 	</section>
 </PageLayout>
