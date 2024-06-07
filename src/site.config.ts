@@ -12,7 +12,7 @@ export const siteConfig: SiteConfig = {
         },
     },
     description: "miyamo",
-    lang: "ja-JP",
+    lang: "ja",
     ogLocale: "ja_JP",
     sortPostsByUpdatedDate: true,
     title: "miyamo",

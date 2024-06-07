@@ -7,11 +7,11 @@ import Header from "@/components/layout/Header.astro";
 import { siteConfig } from "@/site-config";
 
 interface Props {
-    meta: SiteMeta;
+    siteMeta: SiteMeta;
 }
 
 const {
-    meta: { articleDate, description = siteConfig.description, ogImage, title },
+    siteMeta: { articleDate, description = siteConfig.description, ogImage, title },
 } = Astro.props
 ---
 
