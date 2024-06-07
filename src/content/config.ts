@@ -10,8 +10,8 @@ function removeDupsAndLowerCase(array: string[]) {
 const post = defineCollection({
     type: "content",
     schema: z.object({
-        title: z.string().optional(),
-        description: z.string().min(50).max(160),
+        title: z.string(),
+        description: z.string().max(160),
         draft: z.boolean().default(false),
         ogImage: z.string().optional(),
         publishDate: z.string().or(z.date()).transform((val) => new Date(val)),
