@@ -2,7 +2,7 @@ import type { SiteConfig } from "@/types";
 import type { AstroExpressiveCodeOptions } from "astro-expressive-code";
 
 export const siteConfig: SiteConfig = {
-    author: "Yasuaka Miyamoto",
+    author: "miyamo",
     date: {
         locale: "ja-JP",
         options: {
