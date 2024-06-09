@@ -4,5 +4,9 @@ export default {
 	theme: {
 		extend: {},
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/typography'),
+		require('@tailwindcss/aspect-ratio'),
+	],
+	darkMode: ["class", '[data-theme="dark"]'],
 }
