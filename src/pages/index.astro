@@ -21,13 +21,14 @@ const allPosts = await getCollection("post");
 			<li><a href="https://www.threads.net/@miyamo.y">Threads</a></li>
 		</ul>
 	</section>
-	<section>
+	<section aria-label="Blog post list" class="mt-16">
+		<h2 class="title mb-4 text-xl">Posts</h2>
+		<ul class="space-y-4">
 		{
 			allPosts.map((post) => (
-				<ul>
-					<li><a href={"posts/" + post.slug}></a>{post.data.title}</li>
-				</ul>
-			))	
+				<li><a href={`posts/${post.slug}/`}>{post.data.title}</a></li>
+			))
 		}
+		</ul>
 	</section>
 </PageLayout>
