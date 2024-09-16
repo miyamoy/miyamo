@@ -1,0 +1,63 @@
+body {
+    background-color: whitesmoke;
+}
+
+main {
+    width: 100%;
+    max-width: 720px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1.ja {
+    font-size:larger;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: large;
+    margin-bottom: 20px;
+}
+
+p.en {
+    margin-bottom: 20px;
+}
+
+p.ja {
+    margin-bottom: 20px;
+}
+
+ol {
+    margin-bottom: 20px;
+}
+
+ul {
+    margin-bottom: 20px;
+}
+
+.shapes {
+    margin: 50px;
+    background-color: white;
+    border-color: gray;
+    border-width: 1px;
+}
+
+.toolbar {
+    border-color: gray;
+    margin-bottom: 20px;
+}
+
+.toolbar-tools {
+    display: flex;
+    border-radius: 11px;
+    box-shadow: 0px 0px 2px hsl(0, 0%, 0%, 16%), 0px 2px 3px hsl(0, 0%, 0%, 24%), 0px 2px 6px hsl(0, 0%, 0%, .1), inset 0px 0px 0px 1px hsl(0, 0%, 100%);
+}
+
+.tool-button {
+    height: 35px;
+    width: 35px;
+    padding: 0 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
