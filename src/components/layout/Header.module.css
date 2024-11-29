@@ -1,0 +1,22 @@
+.header {
+  width: 100%;
+  max-width: 640px;
+  margin: auto;
+}
+
+.div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.a {
+  color: black;
+  font-size: medium;
+  text-decoration: none;
+}
+
+.nav a {
+  font-size: small;
+  text-decoration: none;
+}

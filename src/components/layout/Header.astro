@@ -1,15 +1,16 @@
 ---
 import { menuLinks } from "@/site-config";
+import styles from './Header.module.css';
 
 const url = new URL(Astro.request.url);
 ---
 
-<header id="main-header">
-  <div>
-    <a href="/" aria-current={url.pathname === "/" ? "page" : false}>
+<header class={styles.header}>
+  <div class={styles.div}>
+    <a class={styles.a} href="/" aria-current={url.pathname === "/" ? "page" : false}>
       <span>miyamo.me</span>
     </a>
-    <nav id="navigation-menu" aria-label="Main menu">
+    <nav class={styles.nav} id="navigation-menu" aria-label="Main menu">
       {
         menuLinks.map((link) => (
           <a

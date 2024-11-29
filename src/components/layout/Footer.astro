@@ -1,24 +1,13 @@
 ---
 import { menuLinks, siteConfig } from "@/site-config";
+import styles from './Footer.module.css';
 
 const year = new Date().getFullYear();
 ---
 
-<footer>
+<footer class={styles.footer}>
     <div>
         &copy; miyamo
         {year}
     </div>
-    <nav
-        aria-label="More on this site"
-        
-    >
-        {
-            menuLinks.map((link) => (
-                <a  href={link.path}>
-                    {link.title}
-                </a>
-            ))
-        }
-    </nav>
 </footer>
