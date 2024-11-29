@@ -1,15 +1,10 @@
 ---
-import { getCollection } from "astro:content";
-import "../styles/global.css"
-import styles from "../styles/index.module.css";
-
-import PageLayout from "@/layouts/PageLayout.astro";
-
-const allPosts = await getCollection("post");
+import PageLayoyt from '@/layouts/PageLayout.astro';
+import styles from '../styles/about.module.css';
 ---
 
-<PageLayout siteMeta={{ title: "Home" }}>
-	<section>
+<PageLayoyt siteMeta={{ title: "About"}}>
+  <section>
 		<h1 class={styles.h1}>miyamo</h1>
 		<p class={styles.p}>Software engineer at a game company</p>
 	</section>
@@ -22,14 +17,4 @@ const allPosts = await getCollection("post");
 			<li><a href="https://www.threads.net/@miyamo.y">Threads</a></li>
 		</ul>
 	</section>
-	<section aria-label="Blog post list" class={styles.section}>
-		<h2 class={styles.h2}>Posts</h2>
-		<ul class={styles.ul}>
-		{
-			allPosts.map((post) => (
-				<li><a href={`posts/${post.slug}/`}>{post.data.title}</a></li>
-			))
-		}
-		</ul>
-	</section>
-</PageLayout>
+</PageLayoyt>

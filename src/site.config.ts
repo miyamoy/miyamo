@@ -24,12 +24,12 @@ export const menuLinks: { path: string, title: string }[] = [
         title: "Home",
     },
     {
-        path: "/about/",
+        path: "/about",
         title: "About",
     },
     {
-        path: "posts",
-        title: "Blog",
+        path: "/posts",
+        title: "Post",
     },
 ];
 
