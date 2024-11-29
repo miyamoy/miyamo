@@ -2,7 +2,7 @@
 // CollectionEntry型をインポート
 import type { CollectionEntry } from "astro:content";
 
-import BaseLayout from "./Base.astro";
+import PageLayout from "./PageLayout.astro";
 
 // Propsの型を CollectionEntry に設定
 interface Props {
@@ -20,12 +20,12 @@ const socialImage = ogImage ?? `/og-image/${slug}.png`;
 const articleDate = updateDate?.toISOString() ?? publishDate.toISOString();
 ---
 
-<BaseLayout siteMeta={{ articleDate, description, ogImage: socialImage, title }}>
+<PageLayout siteMeta={{ articleDate, description, ogImage: socialImage, title }}>
     <div>
-        <article data-pagefind-body>
+        <article>
             <div>
                 <slot />
             </div>
         </article>
     </div>
-</BaseLayout>
+</PageLayout>

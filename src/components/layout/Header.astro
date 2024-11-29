@@ -5,28 +5,22 @@ const url = new URL(Astro.request.url);
 ---
 
 <header id="main-header">
-    <div>
-        <a
-            href="/"
-            aria-current={url.pathname === "/" ? "page" : false}
-        >
-            <span>miyamo.me</span>
-        </a>
-        <nav
-            id="navigation-menu"
-            aria-label="Main menu"
-        >
-            {
-                menuLinks.map((link) => {
-                    <a
-                        aria-current={url.pathname === link.path ? "page" : false}
-                        data-astro-prefetch
-                        href={link.path}
-                    >
-                        {link.title}
-                    </a>
-                })
-            }
-        </nav>
-    </div>
+  <div>
+    <a href="/" aria-current={url.pathname === "/" ? "page" : false}>
+      <span>miyamo.me</span>
+    </a>
+    <nav id="navigation-menu" aria-label="Main menu">
+      {
+        menuLinks.map((link) => (
+          <a
+            aria-current={url.pathname === link.path ? "page" : false}
+            data-astro-prefetch
+            href={link.path}
+          >
+            {link.title}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
 </header>

@@ -1,0 +1,21 @@
+---
+import { getCollection } from "astro:content";
+import PageLayoyt from '@/layouts/PageLayout.astro';
+
+const allPosts = await getCollection("post");
+---
+
+<PageLayoyt siteMeta={{ title: "Posts"}}>
+    <section>
+        <h1>Posts</h1>
+    </section>
+    <section aria-label="Blog post list">
+        <ul>
+        {
+            allPosts.map((post) => (
+                <li><a href={`posts/${post.slug}/`}>{post.data.title}</a></li>
+            ))
+        }
+        </ul>
+    </section>
+</PageLayoyt>

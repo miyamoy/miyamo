@@ -1,0 +1,21 @@
+body {
+    background-color: whitesmoke;
+}
+
+header {
+  width: 100%;
+  max-width: 720px;
+  margin: auto;
+}
+
+main {
+  width: 100%;
+  max-width: 720px;
+  margin: auto;
+}
+
+footer {
+  width: 100%;
+  max-width: 720px;
+  margin: auto;
+}
