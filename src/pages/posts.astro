@@ -1,11 +1,11 @@
 ---
 import { getCollection } from "astro:content";
-import PageLayoyt from '@/layouts/PageLayout.astro';
+import PageLayout from '@/layouts/PageLayout.astro';
 
 const allPosts = await getCollection("post");
 ---
 
-<PageLayoyt siteMeta={{ title: "Posts"}}>
+<PageLayout siteMeta={{ title: "Posts"}}>
     <section>
         <h1>Posts</h1>
     </section>
@@ -18,4 +18,4 @@ const allPosts = await getCollection("post");
         }
         </ul>
     </section>
-</PageLayoyt>
+</PageLayout>
