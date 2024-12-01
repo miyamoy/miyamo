@@ -1,16 +1,17 @@
 ---
 import { getCollection } from "astro:content";
 import PageLayout from '@/layouts/PageLayout.astro';
+import styles from '../styles/posts.module.css';
 
 const allPosts = await getCollection("post");
 ---
 
 <PageLayout siteMeta={{ title: "Posts"}}>
     <section>
-        <h1>Posts</h1>
+        <h1 class={styles.h1}>Posts</h1>
     </section>
-    <section aria-label="Blog post list">
-        <ul>
+    <section aria-label="Blog post list" class={styles.section}>
+        <ul class={styles.ul}>
         {
             allPosts.map((post) => (
                 <li><a href={`/posts/${post.slug}/`}>{post.data.title}</a></li>
