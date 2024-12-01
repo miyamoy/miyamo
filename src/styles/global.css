@@ -5,7 +5,7 @@ body {
 
 main {
   width: 100%;
-  max-width: 640px;
+  max-width: 720px;
   margin-inline: auto;
   margin-block: 50px;
 }
