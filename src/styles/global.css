@@ -9,3 +9,8 @@ main {
   margin-inline: auto;
   margin-block: 50px;
 }
+
+a {
+  color: #3E527E;
+  text-decoration: none;
+}
