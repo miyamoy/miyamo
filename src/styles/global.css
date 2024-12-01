@@ -14,3 +14,15 @@ a {
   color: #3E527E;
   text-decoration: none;
 }
+
+h2 {
+  font-size: larger;
+}
+
+h3 {
+  font-size: large;
+}
+
+h4 {
+  font-size: medium;
+}
