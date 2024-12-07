@@ -69,7 +69,7 @@ Ok to proceed? (y) y
 プロジェクトが作成されるので、コマンドを実行します。
 
 ```shell
-Scaffolding project in C:\Users\y5-miyamoto\vite-project...
+Scaffolding project in C:\Users\miyamo\vite-project...
 
 Done. Now run:
 
