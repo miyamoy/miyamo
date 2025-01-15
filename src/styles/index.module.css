@@ -16,4 +16,22 @@
 
 .ul {
   margin-top: 1rem;
+  list-style: none;
+  padding-left: 10px;
+}
+
+.postItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.time {
+  width: 100px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.postLink {
+  flex-grow: 1; /* 残りのスペースを占める */
 }

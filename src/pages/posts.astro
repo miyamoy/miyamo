@@ -4,6 +4,7 @@ import PageLayout from '@/layouts/PageLayout.astro';
 import styles from '../styles/posts.module.css';
 
 const allPosts = await getCollection("post");
+allPosts.sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime());
 ---
 
 <PageLayout siteMeta={{ title: "Posts"}}>
@@ -12,11 +13,16 @@ const allPosts = await getCollection("post");
     </section>
     <section aria-label="Blog post list" class={styles.section}>
         <ul class={styles.ul}>
-        {
+          {
             allPosts.map((post) => (
-                <li><a href={`/posts/${post.slug}/`}>{post.data.title}</a></li>
+              <li class={styles.postItem}>
+                <time class={styles.time} datetime={post.data.publishDate.toISOString()}>
+                  {new Date(post.data.publishDate).toLocaleDateString('ja-JP')}
+                </time>
+                <a class={styles.postLink} href={`posts/${post.slug}/`}>{post.data.title}</a>
+              </li>
             ))
-        }
+          }
         </ul>
     </section>
 </PageLayout>
