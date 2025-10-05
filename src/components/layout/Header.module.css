@@ -11,15 +11,21 @@
 }
 
 .a {
-  font-size: medium;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .nav {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .nav a {
-  font-size: small;
+  font-size: 0.9375rem;
   text-decoration: none;
+  border-bottom: none !important;
+}
+
+.nav a:hover {
+  opacity: 0.6;
 }

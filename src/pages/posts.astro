@@ -8,16 +8,14 @@ allPosts.sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data
 ---
 
 <PageLayout siteMeta={{ title: "Posts"}}>
-    <section>
+    <section class={styles.firstSection}>
         <h1 class={styles.h1}>Posts</h1>
-    </section>
-    <section aria-label="Blog post list" class={styles.section}>
         <ul class={styles.ul}>
           {
             allPosts.map((post) => (
               <li class={styles.postItem}>
                 <time class={styles.time} datetime={post.data.publishDate.toISOString()}>
-                  {new Date(post.data.publishDate).toLocaleDateString('ja-JP')}
+                  {post.data.publishDate.toISOString().split('T')[0]}
                 </time>
                 <a class={styles.postLink} href={`posts/${post.slug}/`}>{post.data.title}</a>
               </li>

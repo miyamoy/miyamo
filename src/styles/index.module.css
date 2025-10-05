@@ -1,37 +1,84 @@
 .h1 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .p {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.125rem;
+}
+
+.firstSection {
+  margin: 0;
+  padding: 0;
 }
 
 .section {
-  margin-top: 1rem;
+  margin-top: 5rem;
+  padding-top: 3rem;
+  border-top: 1px solid #E5E5E5;
+}
+
+.socialList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.socialList li {
+  display: inline;
 }
 
 .ul {
   margin-top: 1rem;
   list-style: none;
-  padding-left: 10px;
+  padding-left: 0;
 }
 
 .postItem {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.75rem 0;
+  transition: transform 0.2s ease;
+  gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .postItem {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+.postItem:hover {
+  transform: translateX(4px);
 }
 
 .time {
-  width: 100px;
-  margin-right: 10px;
+  width: auto;
+  margin-right: 0;
   flex-shrink: 0;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.875rem;
+  color: #6B7280;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (min-width: 640px) {
+  .time {
+    width: 100px;
+    margin-right: 20px;
+  }
 }
 
 .postLink {
-  flex-grow: 1; /* 残りのスペースを占める */
+  flex-grow: 1;
 }

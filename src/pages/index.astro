@@ -1,6 +1,5 @@
 ---
 import { getCollection } from "astro:content";
-import "../styles/global.css"
 import styles from "../styles/index.module.css";
 
 import PageLayout from "@/layouts/PageLayout.astro";
@@ -10,12 +9,12 @@ allPosts.sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data
 ---
 
 <PageLayout siteMeta={{ title: "Home" }}>
-	<section>
+	<section class={styles.firstSection}>
 		<h1 class={styles.h1}>miyamo</h1>
 		<p class={styles.p}>Software engineer</p>
 	</section>
 	<section aria-label="Social link list" class={styles.section}>
-		<ul>	
+		<ul class={styles.socialList}>
 			<li><a href="https://github.com/miyamoy">GitHub</a></li>
 			<li><a href="https://twitter.com/miyamo_ys">X(Twitter)</a></li>
 			<li><a href="https://bsky.app/profile/miyamo.me">Bluesky</a></li>
@@ -30,7 +29,7 @@ allPosts.sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data
 			allPosts.map((post) => (
 				<li class={styles.postItem}>
           <time class={styles.time} datetime={post.data.publishDate.toISOString()}>
-            {new Date(post.data.publishDate).toLocaleDateString('ja-JP')}
+            {post.data.publishDate.toISOString().split('T')[0]}
           </time>
           <a class={styles.postLink} href={`posts/${post.slug}/`}>{post.data.title}</a>
         </li>
